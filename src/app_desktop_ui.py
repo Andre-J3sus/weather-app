@@ -1,6 +1,6 @@
 from tkinter import *
 import tkinter.messagebox
-from src.services import *
+from src.app_services import *
 
 # Screen configuration
 app = Tk()
@@ -19,8 +19,10 @@ city_entry.insert(0, "City name")
 city_entry.pack()
 
 
-# Function to search the weather
 def search_weather():
+    """
+    Searches the weather.
+    """
     global img, bg, weather_info_list
     city_name = city_entry.get().capitalize()
     weather_info = get_city_weather(city_name)
