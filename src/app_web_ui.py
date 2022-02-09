@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from src.services import *
+from src.app_services import *
 import os
 
 template_dir = os.path.abspath('../templates')
